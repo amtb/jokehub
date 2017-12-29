@@ -1,2 +1,2 @@
-# jokehub
+# Jokehub
 A hub of Jokes
