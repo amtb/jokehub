@@ -1,5 +1,5 @@
 language: node_js
-install:
-  - npm install --no-save
-  - npm run lint
-  #- npm run test --single-run=true
+node_js:
+  - "node"
+
+#- npm run test --single-run=true
