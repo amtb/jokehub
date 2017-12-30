@@ -5,6 +5,9 @@ import { MatCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
+import { ChuckNorrisJokesApiService } from './services';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    ChuckNorrisJokesApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
