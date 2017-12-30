@@ -21,8 +21,7 @@ before_script:
 
 script:
   - ng lint
-  - ng test --watch false --single-run
-  - npm run e2e
+  #- ng test --watch false --single-run
   - ng build -bh "https://amtb.github.io/jokehub/"
 
 deploy:
