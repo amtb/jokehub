@@ -1,0 +1,10 @@
+
+.mat-tab-label {
+  color: blue;
+}
+
+.tab-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
