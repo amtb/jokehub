@@ -1,25 +1,16 @@
-import { Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
-import { ChuckNorrisJokesApiService } from './services';
+import { HomePageComponent } from './pages';
+import { NavbarComponent } from './components';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'app';
+  constructor () {
 
-  data: any;
-
-  constructor (private joke: ChuckNorrisJokesApiService) {
-
-  }
-
-  ngOnInit() {
-    this.joke.getRandomJoke().subscribe(e => {
-      this.data = e;
-      console.log(e);
-     });
   }
 }
