@@ -47,7 +47,7 @@ export class ChuckNorrisJokesApiService extends BaseApi {
 
   public getRandomJokes(): Observable<Joke[]> {
     return Observable.forkJoin([
-      this.getChuckNorrisJoke(),//.pipe(merge());
+      this.getChuckNorrisJoke(),
       this.getDadJokes(),
       this.get15DkatzJokes()
     ])
