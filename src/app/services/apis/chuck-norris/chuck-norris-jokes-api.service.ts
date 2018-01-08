@@ -7,8 +7,6 @@ import { map } from 'rxjs/operators';
 
 import { decode } from 'ent';
 
-import { BaseApi } from '../base-api';
-
 import { Joke } from '../../../models';
 
 
@@ -39,11 +37,9 @@ const dkatzApiMapper = map((data: any) => {
 const jsonMapper = map((response: Response) => response.json());
 
 @Injectable()
-export class ChuckNorrisJokesApiService extends BaseApi {
+export class ChuckNorrisJokesApiService {
 
-  constructor(private http: Http) {
-    super('http://api.icndb.com/jokes');
-  }
+  constructor(private http: Http) {}
 
   public getRandomJokes(): Observable<Joke[]> {
     return Observable.forkJoin([
@@ -57,7 +53,7 @@ export class ChuckNorrisJokesApiService extends BaseApi {
   }
 
   private getChuckNorrisJoke(): Observable<Joke[]> {
-    return this.http.get(`${this.baseURL}/random/10?exclude=[explicit]`)
+    return this.http.get(`https://api.icndb.com/jokes/random/10?exclude=[explicit]`)
       .pipe(jsonMapper, chuckNorrisApiMapper);
   }
 
